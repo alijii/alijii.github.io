@@ -1,0 +1,103 @@
+.resume{
+    padding-top: 120px;
+    min-height: 200px;
+    &_title{
+        
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &_subtitle{
+        text-align: center;
+    }
+    .divider{
+        width: 60px;
+        height: 3px;
+        margin: 25px auto 0 auto;
+        background-color: rgb(235, 230, 144);
+    }
+    &__wrapper{
+        padding: 65px 65px 0px 65px;
+        display: grid;
+        grid-template-columns: 425px 425px;
+        column-gap: 135px;
+        row-gap: 45px;
+
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: rgb(235, 230, 144);
+                border-radius: 100%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 45px);
+                    position: absolute;
+                    top: -31px;
+                    left: 0;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item{
+        position: relative;
+        &:before{
+            content:'';
+            height: 2px;
+            width: 40px;
+            position: absolute;
+            background-color: #000;
+            top: 23px;
+        }
+        &-head{
+            position: relative;
+            padding: 7px 0 0 99px;
+        }
+        &-body{
+            padding-top: 12px;
+            padding-left: 43px;
+            line-height: 18px;
+            margin-bottom: 45px;
+        }
+        &-icon{
+            position: absolute;
+            top: 5px;
+            left: 39px;
+            @include before_circle;
+            img{
+                position: absolute;
+                left: 21px;
+                top: 10px;
+            }
+        }
+        &-location{
+            font-size: 12px;
+        }
+    }
+}
+
+.title_fz14{
+    margin-bottom: 0;
+}

@@ -1,0 +1,88 @@
+.tools{
+    padding-top: 120px;
+    .divider{
+        width: 60px;
+        height: 3px;
+        margin: 25px auto 0 auto;
+        background-color:rgb(235, 230, 144);
+    }
+    &__wrapper{
+        padding-top: 60px;
+        padding-bottom: 120px;
+        display: grid;
+        grid-template-columns: repeat(4,270px);
+        grid-template-rows: 270px 270px;
+        grid-gap: 13px;
+    }
+    &_column{
+        padding: 30px 30px 25px 30px;
+        border: solid 1.5px;
+    }
+    &__title{
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    &__text{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    &__scale{
+        display: grid;
+        grid-template-columns: repeat(3,350px);
+        grid-gap: 45px;
+        // grid-template-rows: 75px 75px;
+        .title_fz14{
+            position: relative;
+            left: 13px;
+            top: 12px;
+            &:before{
+                content: '';
+                z-index:-3;
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                background:rgb(235, 230, 144);
+                border-radius: 100%;
+                left: -12px;
+                top: 10px;
+                transform: translateY(-50%);
+            }
+        }
+
+        &_ratings{
+            position: relative;
+            margin-top: 30px;
+            width: 350px;
+            height: 14px;
+            border-radius: 4px;
+            background: #E8E4DE;
+            z-index:-1;
+            span{
+                border-radius: 4px;
+                position: absolute;
+                height: 14px;
+                background:rgb(235, 230, 144);
+            }
+        }
+        
+        &_colums{
+            display: grid;
+            grid-template-rows: 75px 75px;
+            grid-gap: 30px;
+            &-1{
+                position: relative;
+            }
+            &-procent{
+                position: absolute;
+                top: 12px;
+                left: 309px;
+            }
+        }
+    }
+}
+.divider{
+    width: 60px;
+    height: 3px;
+    margin: 25px auto 0 auto;
+    background-color: rgb(235, 230, 144);
+}
